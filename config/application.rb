@@ -11,6 +11,9 @@ module NamespacedComponentsIssue
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
+    # THE LINE THAT ALLOWS FOLDERS FOR EACH COMPONENT
+    config.autoload_paths += Dir[config.root.join('app/components/*')]
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
